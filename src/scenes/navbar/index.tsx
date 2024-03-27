@@ -1,10 +1,8 @@
 import { useState } from "react";
 import { Bars3Icon, XMarkIcon, XmarkIcon } from "@heroicons/react/24/solid";
-import Logo from "@/assets/Logo.png";
 import Link from "./Link";
 import { SelectedPage } from "@/shared/types";
 import { useMediaQuery } from "@mui/material";
-import ActionButton from "@/shared/ActionButton";
 import Name from "@/assets/name.png";
 
 type Props = {

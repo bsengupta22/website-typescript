@@ -1,6 +1,10 @@
 import { SelectedPage } from "@/shared/types";
 import { motion } from "framer-motion";
 import AnchorLink from "react-anchor-link-smooth-scroll";
+import { BrowserRouter, Routes, Route, useNavigate } from "react-router-dom";
+import StockSelection from "./ProjectPages/StockSelection";
+import { Button } from 'semantic-ui-react'
+
 
 const childVariant = {
   hidden: { opacity: 0, scale: 0.9 },
@@ -14,7 +18,7 @@ type Props = {
   setSelectedPage: (value: SelectedPage) => void;
 };
 
-const Project = ({ icon, title, description, setSelectedPage }: Props) => {
+const Project = ({ icon, title, description, setSelectedPage}: Props) => {
   return (
     <motion.div
       variants={childVariant}
@@ -34,7 +38,11 @@ const Project = ({ icon, title, description, setSelectedPage }: Props) => {
         href={`#${SelectedPage.Contact}`}
         // Change link to Projects
       >
-        <p>Learn More</p>
+
+<>
+      <Button >Click me</Button>
+    </>
+
       </AnchorLink>
     </motion.div>
   );
