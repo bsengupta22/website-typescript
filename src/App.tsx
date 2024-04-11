@@ -2,6 +2,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Root from "./root";
 import StockSelection from "./scenes/portfolio/ProjectPages/StockSelection";
+import AllStar from "./scenes/portfolio/ProjectPages/AllStar";
 import { NoPage } from "./scenes/NoPage";
 
 
@@ -16,7 +17,9 @@ function App() {
 <BrowserRouter>
 <Routes>
     <Route index element = {<Root/>} />
+    <Route path = "/home" element = {<Root/>} />
     <Route path ="/stockselection" element = {<StockSelection/>} />
+    <Route path ="/allstar" element = {<AllStar/>} />
     <Route path = "/*" element = {<NoPage/>}/>
 
   </Routes>

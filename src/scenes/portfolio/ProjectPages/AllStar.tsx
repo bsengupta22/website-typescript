@@ -40,8 +40,8 @@ const StockSelection = () => {
 
               
                   <HText>
-                    Ranking {" "} Using Python and Financial Ratios
-                    <span className="text-primary-500"> Nasdaq-100 Stocks by Sector</span>
+                    Using ML to Predict {" "} For Each Year
+                    <span className="text-primary-500"> NBA ALL STARS</span>
                   </HText>
                 </div>
                   <motion.div
@@ -54,9 +54,7 @@ const StockSelection = () => {
                 visible: { opacity: 1, x: 0 },
               }}
             >
-                
-              
-              <h1 className = "text-lg font-bold pb-3 pt-2">Part 1 - Importing Python Libraries</h1>
+              <h1 className = "text-lg font-bold pb-3 pt-2">Part 1 - Importing R Libraries</h1>
 
 
               <p className="pb-2 justify-center">
@@ -64,9 +62,9 @@ const StockSelection = () => {
                 In addition to <strong>pandas</strong>, you will need to import <strong>yahoo finance</strong>.
 
                 </p>
-                <div className="flex basis-3/5 justify-center md:z-10">
+                {/* <div className="flex basis-3/5 justify-center md:z-10">
           <img alt="imports" src={imports} />
-          </div>
+          </div> */}
 
                 <h1 className = "text-lg font-bold pb-3 pt-2 ">Part 2 - Retrieve Stock Tickers From Wikipedia</h1>
                 <p className="mb-2 justify-center">
@@ -126,6 +124,7 @@ const StockSelection = () => {
              <div className="flex basis-3/5 justify-center">
                 <img alt="write-to-excel" src={writeexcel} />
             </div>
+    
             </motion.div>
             </motion.div>
             

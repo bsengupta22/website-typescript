@@ -3,13 +3,15 @@ import HText from "@/shared/HText";
 import { ProjectType, SelectedPage } from "@/shared/types";
 import {
   BanknotesIcon,
-  CpuChipIcon,
+  StarIcon,
   ScaleIcon
 } from "@heroicons/react/24/solid"; 
 // Import Custom Icons from heroicons
 import { motion } from "framer-motion";
 import SixersLogo from "@/assets/76ersLogo.png";
 import Project from "./Project";
+import StockSelection from "./ProjectPages/StockSelection";
+import AllStar from "./ProjectPages/AllStar"
 
 
 
@@ -17,22 +19,26 @@ import Project from "./Project";
 const projects: Array<ProjectType> = [
   {
     icon: <BanknotesIcon className="h-6 w-6" />,
-    title: "State of the Art Facilities",
+    title: "Ranking Nasdaq-100 Stocks",
     description:
-      "Neque adipiscing amet amet enim. Feugiat dolor enim fermentum in a in lectus pellentesque. Ullamcorper et.",
+      "An introduction to stock ranking using python",
+    path: "/stockselection",
+    element: StockSelection
   },
   {
-    icon: <CpuChipIcon className="h-6 w-6" />,
+    icon: <StarIcon className="h-6 w-6" />,
     title: "100's of Diverse Classes",
     description:
       "Eu ipsum id egestas risus tempus enim semper felis quis. Nec consectetur ac venenatis facilisi est. Eget ac turpis id.",
+    path: "/allstar",
+    element: AllStar
   },
-  {
-    icon: <ScaleIcon className="h-6 w-6" />,
-    title: "Expert and Pro Trainers",
-    description:
-      "Fusce vestibulum aliquam ut cras. Nisl lectus egestas sapien nisl. Lacus at mi sit pellentesque. Congue parturient.",
-  },
+  // {
+  //   icon: <ScaleIcon className="h-6 w-6" />,
+  //   title: "Expert and Pro Trainers",
+  //   description:
+  //     "Fusce vestibulum aliquam ut cras. Nisl lectus egestas sapien nisl. Lacus at mi sit pellentesque. Congue parturient.",
+  // },
 ];
 
 const container = {
@@ -72,7 +78,7 @@ const Projects = ({ setSelectedPage }: Props) => {
 
         {/* BENEFITS */}
         <motion.div
-          className="mt-5 items-center justify-between gap-8 md:flex"
+          className="mt-5 justify-center gap-8"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
@@ -85,8 +91,11 @@ const Projects = ({ setSelectedPage }: Props) => {
               title={projects.title}
               description={projects.description}
               setSelectedPage={setSelectedPage}
+              browserpath={projects.path}
+              browserelement={projects.element}
             />
           ))}
+
         </motion.div>
 
         {/* GRAPHICS AND DESCRIPTION */}
@@ -133,18 +142,29 @@ const Projects = ({ setSelectedPage }: Props) => {
               }}
             >
               <p className="my-5">
-                Nascetur aenean massa auctor tincidunt. Iaculis potenti amet
-                egestas ultrices consectetur adipiscing ultricies enim. Pulvinar
-                fames vitae vitae quis. Quis amet vulputate tincidunt at in
-                nulla nec. Consequat sed facilisis dui sit egestas ultrices
-                tellus. Ullamcorper arcu id pretium sapien proin integer nisl.
-                Felis orci diam odio.
-              </p>
+
+                Most of my projects are a reflection of my interests. Throughout university
+                i have really enjoyed learning about finance - optimising portfolios, picking securities,
+                trading derivatives etc. These interests combined with my studies in advanced computing have 
+                enabled me to write a program that analyses the financial ratios of nasdaq-100 and output
+                the top performers by industry. In future i would like to make a portfolio of these securities,
+                optimise it and test out several strategies by backdating their returns.
+
+                </p>
+                <p className="mb-5">
+                Conversely, away from univeristy i love playing and watching sport. Whilst i am yet to finalise
+                this project, i would like to build a machine learning algorithm on R that attemps to predict
+                the outcome of sporting events and create AFL/NBA Fantasy projections so i can win my tipping/fantasy competitions.
+                As i have only won once in the 5 years i have been playing with my friends, this project is of high priority haha.
+
+                </p>
+ 
+             
               <p className="mb-5">
-                Fringilla a sed at suspendisse ut enim volutpat. Rhoncus vel est
-                tellus quam porttitor. Mauris velit euismod elementum arcu neque
-                facilisi. Amet semper tortor facilisis metus nibh. Rhoncus sit
-                enim mattis odio in risus nunc.
+                Lastly, this website has been a project of mine. My university majors of data science and finance
+                have minimal software engineering information and i have not learnt typescript at univesity. Whilst not
+                as polished as a wix website, i thought it would be interesting to try and build a website using typescript 
+                instead.
               </p>
             </motion.div>
 

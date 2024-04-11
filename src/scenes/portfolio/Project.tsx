@@ -4,6 +4,8 @@ import AnchorLink from "react-anchor-link-smooth-scroll";
 import { BrowserRouter, Routes, Route, useNavigate } from "react-router-dom";
 import StockSelection from "./ProjectPages/StockSelection";
 import { Button } from 'semantic-ui-react'
+import { Link } from "react-router-dom";
+
 
 
 const childVariant = {
@@ -16,9 +18,11 @@ type Props = {
   title: string;
   description: string;
   setSelectedPage: (value: SelectedPage) => void;
+  browserpath: string;
+  browserelement: any;
 };
 
-const Project = ({ icon, title, description, setSelectedPage}: Props) => {
+const Project = ({ icon, title, description, setSelectedPage, browserpath, browserelement}: Props) => {
   return (
     <motion.div
       variants={childVariant}
@@ -37,10 +41,13 @@ const Project = ({ icon, title, description, setSelectedPage}: Props) => {
         onClick={() => setSelectedPage(SelectedPage.Contact)}
         href={`#${SelectedPage.Contact}`}
         // Change link to Projects
+        
       >
 
 <>
-      <Button >Click me</Button>
+<Link to="/stockselection" className="btn btn-primary">View Article</Link>
+
+      
     </>
 
       </AnchorLink>

@@ -46,9 +46,16 @@ const Contact = ({ setSelectedPage }: Props) => {
             GET IN <span className="text-primary-500">CONTACT </span> WITH ME
           </HText>
           <p className="my-5">
-            Congue adipiscing risus commodo placerat. Tellus et in feugiat nisl
-            sapien vel rhoncus. Placerat at in enim pellentesque. Nulla
-            adipiscing leo egestas nisi elit risus sit. Nunc cursus sagittis.
+            Gday, if you have any questions or are intersted in contacting me, send me an email. 
+            </p>
+            <p className="my-5">
+            Currently the form submit is down, so if you do want to send me a message do it via this:
+            </p>
+            <p className="my-5">
+            https://formsubmit.co/el/zaluba
+            </p>
+            <p className="my-5">
+            Cheers
           </p>
         </motion.div>
 

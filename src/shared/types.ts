@@ -9,6 +9,8 @@ export interface ProjectType {
     icon: JSX.Element;
     title: string;
     description: string;
+    path: string;
+    element: any;
   }
   
 export interface ClassType {
